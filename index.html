@@ -441,6 +441,15 @@
   .dosen-line b{ color:var(--chalk); }
   .footer-meta{ margin-top:2.5rem; font-family:var(--font-mono); font-size:.72rem; color:var(--chalk-faint); }
 
+  /* ---------- Embed Video -------------*/
+  .video-embed{ padding:1rem; }
+    .video-frame{
+      position:relative; width:100%; aspect-ratio:16/9;
+      border-radius:2px; overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,.35) inset;
+    }
+.video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+
   /* ---------- Next-section button ---------- */
   .next-btn{
     position:fixed; right:1.5rem; bottom:1.5rem; z-index:55;
@@ -507,7 +516,7 @@
       <div class="id-card-meta">
         <span><b>Dosen Pengampu&nbsp;:</b> Ahyani Mirah Liani, S.Pd., M.Pd.</span>
         <span><b>Fakultas&nbsp;:</b> Matematika dan Ilmu Pengetahuan Alam</span>
-        <span><b>Universitas&nbsp;:</b> Negeri Makassar &middot; 2026</span>
+        <span><b>Universitas&nbsp;:</b> Universitas Negeri Makassar &middot; 2026</span>
       </div>
       <div class="mini-stamp" aria-hidden="true" style="opacity:.85; animation:none; transform:scale(1) rotate(-9deg);">TERDAFTAR</div>
     </div>
@@ -553,6 +562,21 @@
     </div>
   </section>
 
+  <section class=""wrap tight" id="video">
+    <p class="eyebrow reveal">Tonton Ini!</p>
+    <h2 class="section-title reveal" style="font-sizen:1.5rem;">Ringkasan Singkat</h2>
+    <div class="card video-embed reveal">
+    <div class="video-frame">
+      <iframe
+        src="https://youtu.be/embed/sPbADTfwzwQ?si=CRh6VhES0FUHG5Af"
+        title="***"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>  
+        </iframe>
+      </div>
+    </div>
+  </section>  
   <!-- 02 PENGERTIAN -->
   <section class="wrap" id="pengertian">
     <p class="eyebrow">02 &mdash; Pengertian</p>
