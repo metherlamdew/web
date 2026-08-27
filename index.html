@@ -454,13 +454,16 @@
     @media (prefers-reduced-motion: reduce){
 
   /* ---------- Embed Video -------------*/
-  .video-embed{ padding:1rem; display:flex; justify-content:center; }
-    .video-frame{
-      position:relative; width:100%; max-width:640px; aspect-ratio:16/9;
-      border-radius:2px; overflow:hidden;
-      box-shadow:0 6px 18px rgba(0,0,0,.35) inset;
-      margin:0 auto;
-    }
+  .video-embed{
+    max-width:700px;      /* 640px video + padding kartu */
+    margin:0 auto;         /* kartunya sendiri yang di-tengah */
+    padding:1.4rem;
+  }
+  .video-frame{
+    position:relative; width:100%; aspect-ratio:16/9;
+    border-radius:2px; overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,.35) inset;
+  }
   .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 
   /* ---------- Next-section button ---------- */
