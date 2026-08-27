@@ -441,22 +441,20 @@
   .dosen-line b{ color:var(--chalk); }
   .footer-meta{ margin-top:2.5rem; font-family:var(--font-mono); font-size:.72rem; color:var(--chalk-faint); }
 
-    /* Skala naik di layar lebar / proyektor */
-    @media (min-width: 1600px){
-      html{ font-size:18px; }
-      .wrap{ max-width:1280px; }
-    }
-    @media (min-width: 2000px){
-      html{ font-size:20px; }
-      .wrap{ max-width:1400px; }
-    }
+  /* ---------- Skala naik di layar lebar / proyektor ---------- */
+  @media (min-width: 1600px){
+    html{ font-size:18px; }
+    .wrap{ max-width:1280px; }
+  }
+  @media (min-width: 2000px){
+    html{ font-size:20px; }
+    .wrap{ max-width:1400px; }
+  }
 
-    @media (prefers-reduced-motion: reduce){
-
-  /* ---------- Embed Video -------------*/
+  /* ---------- Embed Video ---------- */
   .video-embed{
-    max-width:700px;      /* 640px video + padding kartu */
-    margin:0 auto;         /* kartunya sendiri yang di-tengah */
+    max-width:700px;
+    margin:0 auto;
     padding:1.4rem;
   }
   .video-frame{
@@ -532,7 +530,7 @@
       <div class="id-card-meta">
         <span><b>Dosen Pengampu&nbsp;:</b> Ahyani Mirah Liani, S.Pd., M.Pd.</span>
         <span><b>Fakultas&nbsp;:</b> Matematika dan Ilmu Pengetahuan Alam</span>
-        <span><b>Universitas&nbsp;:</b> Universitas Negeri Makassar &middot; 2026</span>
+        <span><b>Universitas&nbsp;:</b> Negeri Makassar &middot; 2026</span>
       </div>
       <div class="mini-stamp" aria-hidden="true" style="opacity:.85; animation:none; transform:scale(1) rotate(-9deg);">TERDAFTAR</div>
     </div>
@@ -578,21 +576,22 @@
     </div>
   </section>
 
-  <section class=""wrap tight" id="video">
+  <!-- VIDEO PENJELASAN -->
+  <section class="wrap tight" id="video">
     <p class="eyebrow reveal">Tonton Ini!</p>
     <div class="card video-embed reveal">
-    <div class="video-frame">
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/sPbADTfwzwQ?si=COxobXSZGkvz3-lo"
-        title="***"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>  
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/sPbADTfwzwQ"
+          title="Guru Dibayar Murah = Wajar? — Satu Persen"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
         </iframe>
       </div>
     </div>
-  </section>  
-  
+  </section>
+
   <!-- 02 PENGERTIAN -->
   <section class="wrap" id="pengertian">
     <p class="eyebrow">02 &mdash; Pengertian</p>
@@ -979,7 +978,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Scrollspy */
-  const sectionOrder = ['sampul','pendahuluan','pengertian','syarat','kompetensi','tantangan','penutup','pustaka'];
+  const sectionOrder = ['sampul','pendahuluan','video','pengertian','syarat','kompetensi','tantangan','penutup','pustaka'];
   const sections = document.querySelectorAll('main > section[id]');
   const railLinks = document.querySelectorAll('.rail a');
   const currentLabel = document.getElementById('currentSectionLabel');
