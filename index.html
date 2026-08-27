@@ -441,6 +441,18 @@
   .dosen-line b{ color:var(--chalk); }
   .footer-meta{ margin-top:2.5rem; font-family:var(--font-mono); font-size:.72rem; color:var(--chalk-faint); }
 
+    /* Skala naik di layar lebar / proyektor */
+    @media (min-width: 1600px){
+      html{ font-size:18px; }
+      .wrap{ max-width:1280px; }
+    }
+    @media (min-width: 2000px){
+      html{ font-size:20px; }
+      .wrap{ max-width:1400px; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+
   /* ---------- Embed Video -------------*/
   .video-embed{ padding:1rem; display:flex; justify-content:center; }
     .video-frame{
