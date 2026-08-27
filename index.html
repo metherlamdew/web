@@ -442,13 +442,14 @@
   .footer-meta{ margin-top:2.5rem; font-family:var(--font-mono); font-size:.72rem; color:var(--chalk-faint); }
 
   /* ---------- Embed Video -------------*/
-  .video-embed{ padding:1rem; }
+  .video-embed{ padding:1rem; display:flex; justify-content:center; }
     .video-frame{
-      position:relative; width:100%; aspect-ratio:16/9;
+      position:relative; width:100%; max-width:640px; aspect-ratio:16/9;
       border-radius:2px; overflow:hidden;
       box-shadow:0 6px 18px rgba(0,0,0,.35) inset;
+      margin:0 auto;
     }
-.video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 
   /* ---------- Next-section button ---------- */
   .next-btn{
@@ -564,7 +565,6 @@
 
   <section class=""wrap tight" id="video">
     <p class="eyebrow reveal">Tonton Ini!</p>
-    <h2 class="section-title reveal" style="font-sizen:1.5rem;">Ringkasan Singkat</h2>
     <div class="card video-embed reveal">
     <div class="video-frame">
       <iframe width="560" height="315"
